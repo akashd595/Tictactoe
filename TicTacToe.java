@@ -44,10 +44,10 @@ public class TicTacToe {
             System.out.print(arr[i]+" | ");
         }
         System.out.println();
-        for (int i=8;i<10;i++){
+        for (int i=7;i<10;i++){
             System.out.print(arr[i]+" | ");
 
         }
-        System.out.print("  | ");
+        System.out.println();
     }
 }
