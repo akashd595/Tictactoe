@@ -74,7 +74,7 @@ public class TicTacToe {
             System.out.println("computer's turn");
             uc8();
         }else{
-            System.out.println("no more free space");
+            System.out.println("Its a draw");
         }
         uc3();
     }
@@ -299,8 +299,22 @@ public class TicTacToe {
         }else if (arr[9] == ' '){
             arr[9] = computer;
         }else {
+            uc11();
+        }
+    }
+    public static void uc11(){
+        if(arr[5] == ' '){
+            arr[5] = computer;
+        }else if (arr[2] == ' '){
+            arr[2] = computer;
+        }else if (arr[4] == ' '){
+            arr[4] = computer;
+        }else if (arr[6] == ' '){
+            arr[6] = computer;
+        }else if (arr[8] == ' '){
+            arr[8] = computer;
+        }else {
 
         }
     }
-
 }
