@@ -7,6 +7,7 @@ public class TicTacToe {
     static char user ;
     static char computer;
     static int counter=0;
+    static int toss=0;
 
 
     public static void main(String[] args) {
@@ -15,15 +16,7 @@ public class TicTacToe {
         System.out.println("Welocome to Tic-tac-Toe Masters");
         uc1();
         uc2();
-       // uc3();
-        while(counter<10) {
-            if (counter % 2 == 0) {
-                uc4();
-            } else {
-                uc5();
-            }
-            counter++;
-        }
+        uc6();
 
     }
     public static void uc1(){
@@ -96,5 +89,31 @@ public class TicTacToe {
             System.out.println("no more free space");
         }
         uc3();
+    }
+    public static void uc6(){
+        Random random = new Random();
+        toss = random.nextInt(2);
+        if(toss == 0){
+            System.out.println("user will play first");
+            while(counter<10) {
+                if (counter % 2 == 0) {
+                    uc4();
+                } else {
+                    uc5();
+                }
+                counter++;
+            }
+        }else{
+            System.out.println("Computer will play first");
+            while(counter<10) {
+                if (counter % 2 == 1) {
+                    uc4();
+                } else {
+                    uc5();
+                }
+                counter++;
+            }
+        }
+
     }
 }
