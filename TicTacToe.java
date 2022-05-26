@@ -9,11 +9,10 @@ public class TicTacToe {
     static int counter=0;
     static int toss=0;
 
-
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Welocome to Tic-tac-Toe Masters");
+        System.out.println("Welcome to Tic-tac-Toe Masters");
         uc1();
         uc2();
         uc6();
@@ -39,7 +38,7 @@ public class TicTacToe {
             computer = 'X';
         }
     }
-    public static void uc3(){
+    public static void uc3() {
         System.out.println();
 
         System.out.println(arr[1] + " | " + arr[2] + " | " + arr[3]);
@@ -47,6 +46,7 @@ public class TicTacToe {
         System.out.println(arr[4] + " | " + arr[5] + " | " + arr[6]);
         System.out.println("----------");
         System.out.println(arr[7] + " | " + arr[8] + " | " + arr[9]);
+
     }
     public static void uc4(){
         Scanner sc = new Scanner(System.in);
@@ -72,14 +72,14 @@ public class TicTacToe {
         System.out.println();
         if(counter<9){
             System.out.println("computer's turn");
-
-            int pos = random.nextInt(9)+1;
-            if(arr[pos] == ' ') {
-                arr[pos] = computer;
-                //counter++;
-            }else{
-                uc5();
-            }
+            uc8();
+//            int pos = random.nextInt(9)+1;
+//            if(arr[pos] == ' ') {
+//                arr[pos] = computer;
+//                //counter++;
+//            }else{
+//                uc5();
+//            }
         }else{
             System.out.println("no more free space");
         }
@@ -179,5 +179,64 @@ public class TicTacToe {
             }
         }
     }
+    public static void uc8(){
+        Random random = new Random();
 
+        if(arr[1]==arr[2] && arr[1]==computer && arr[3]==' '){
+            arr[3] = computer;
+        } else if (arr[2]==arr[3] && arr[2]==computer && arr[1]==' ') {
+            arr[1] = computer;
+        } else if (arr[1]==arr[3] && arr[1]==computer && arr[2]==' ') {
+            arr[2] = computer;
+        } else if (arr[4]==arr[5] && arr[4]==computer && arr[6]==' ') {
+            arr[6] = computer;
+        } else if (arr[5]==arr[6] && arr[5]==computer && arr[4]==' ') {
+            arr[4] = computer;
+        } else if (arr[4]==arr[6] && arr[4]==computer && arr[5]==' ') {
+            arr[5] = computer;
+        } else if (arr[7]==arr[8] && arr[8]==computer && arr[9]==' ') {
+            arr[9] = computer;
+        } else if (arr[8]==arr[9] && arr[8]==computer && arr[7]==' ') {
+            arr[7] = computer;
+        } else if (arr[9]==arr[7] && arr[7]==computer && arr[8]==' ') {
+            arr[8] = computer;
+        } else if (arr[1]==arr[4] && arr[4]==computer && arr[7]==' ') {
+            arr[7] = computer;
+        } else if (arr[2]==arr[5] && arr[5]==computer && arr[8]==' ') {
+            arr[8] = computer;
+        } else if (arr[3]==arr[6] && arr[6]==computer && arr[9]==' ') {
+            arr[9] = computer;
+        } else if (arr[1]==arr[7] && arr[7]==computer && arr[4]==' ') {
+            arr[4] = computer;
+        } else if (arr[2]==arr[8] && arr[8]==computer && arr[5]==' ') {
+            arr[5] = computer;
+        } else if (arr[9]==arr[3] && arr[3]==computer && arr[6]==' ') {
+            arr[6] = computer;
+        } else if (arr[4]==arr[7] && arr[7]==computer && arr[1]==' ') {
+            arr[1] = computer;
+        } else if (arr[5]==arr[8] && arr[8]==computer && arr[2]==' ') {
+            arr[2] = computer;
+        } else if (arr[6]==arr[9] && arr[9]==computer && arr[3]==' ') {
+            arr[3] = computer;
+        } else if (arr[1]==arr[5] && arr[5]==computer && arr[9]==' ') {
+            arr[9] = computer;
+        } else if (arr[1]==arr[9] && arr[9]==computer && arr[5]==' ') {
+            arr[5] = computer;
+        } else if (arr[9]==arr[5] && arr[5]==computer && arr[1]==' ') {
+            arr[1] = computer;
+        } else if (arr[7]==arr[5] && arr[5]==computer && arr[3]==' ') {
+            arr[3] = computer;
+        } else if (arr[3]==arr[5] && arr[5]==computer && arr[7]==' ') {
+            arr[7] = computer;
+        } else if (arr[3]==arr[7] && arr[7]==computer && arr[5]==' ') {
+            arr[5] = computer;
+        }else{
+            int pos = random.nextInt(9)+1;
+            if(arr[pos] == ' ') {
+                arr[pos] = computer;
+            }else{
+                uc5();
+            }
+        }
+    }
 }
